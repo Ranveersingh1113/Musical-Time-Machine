@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import requests as r
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
+from spotipy import Spotify
 from dotenv import load_dotenv
 import os
 
