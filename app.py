@@ -3,7 +3,7 @@ from datetime import datetime
 
 import streamlit as st
 
-from billboard_time_machine import (
+from main import (
     fetch_billboard_page,
     fetch_song_and_artist,
     create_spotify_connection
