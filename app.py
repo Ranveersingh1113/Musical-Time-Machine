@@ -2,7 +2,7 @@ import os
 from datetime import datetime
 
 import streamlit as st
-
+#from dotenv import load_dotenv
 from main import (
     fetch_billboard_page,
     fetch_song_and_artist,
@@ -11,10 +11,10 @@ from main import (
 
 # ─── Load Secrets ───
 
-CLIENT_ID     = st.secrets["SPOTIPY"]["CLIENT_ID"]
+CLIENT_ID = st.secrets["SPOTIPY"]["CLIENT_ID"]
 CLIENT_SECRET = st.secrets["SPOTIPY"]["CLIENT_SECRET"]
-REDIRECT_URI  = st.secrets["SPOTIPY"]["REDIRECT_URI"]
-SCOPE         = "playlist-modify-private"
+REDIRECT_URI = st.secrets["SPOTIPY"]["REDIRECT_URI"]
+SCOPE = "playlist-modify-private"
 
 # ─── UI Header ───
 st.set_page_config(page_title="🎵 Musical Time Machine")
@@ -35,7 +35,6 @@ date_input = st.date_input(
 if st.button("Generate Playlist"):
     # Format date
     target_date = date_input.strftime("%Y-%m-%d")
-    target_year = date_input.year
 
     try:
         # 1) Scrape Billboard
@@ -44,10 +43,10 @@ if st.button("Generate Playlist"):
 
         # 2) OAuth & Spotify client
         sp = create_spotify_connection(
-        client_id=CLIENT_ID,
-        client_secret=CLIENT_SECRET,
-        redirect_uri=REDIRECT_URI,
-        scope=SCOPE
+            client_id=CLIENT_ID,
+            client_secret=CLIENT_SECRET,
+            redirect_uri=REDIRECT_URI,
+            scope=SCOPE
         )
         user_id = sp.current_user()["id"]
 
