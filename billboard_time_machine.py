@@ -42,18 +42,23 @@ def fetch_song_and_artist(soup: BeautifulSoup):
     return song_names, t100_artist
 
 
-def create_spotify_connection():
-    return spotipy.Spotify(
-        auth_manager=SpotifyOAuth(
-            scope=scope,
-            redirect_uri=REDIRECT_URI,
-            client_id=CLIENT_ID,
-            client_secret=CLIENT_SECRET,
-            show_dialog=True,
-            cache_path=CACHE_PATH,
-            username=USERNAME,
-        )
+def create_spotify_connection(
+    client_id: str,
+    client_secret: str,
+    redirect_uri: str,
+    scope: str,
+    cache_path: str = "token.txt",
+    show_dialog: bool = True
+) -> Spotify:
+    auth_manager = SpotifyOAuth(
+        client_id=client_id,
+        client_secret=client_secret,
+        redirect_uri=redirect_uri,
+        scope=scope,
+        cache_path=cache_path,
+        show_dialog=show_dialog
     )
+    return Spotify(auth_manager=auth_manager)
 
 
 if __name__ == "__main__":
