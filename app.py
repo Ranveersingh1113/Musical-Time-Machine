@@ -10,10 +10,10 @@ from billboard_time_machine import (
 )
 
 # ─── Load Secrets ───
-load_dotenv()  # loads .env in local dev
-CLIENT_ID     = os.getenv("SPOTIPY_CLIENT_ID")
-CLIENT_SECRET = os.getenv("SPOTIPY_CLIENT_SECRET")
-REDIRECT_URI  = os.getenv("SPOTIPY_REDIRECT_URI")
+
+CLIENT_ID     = st.secrets["SPOTIPY"]["CLIENT_ID"]
+CLIENT_SECRET = st.secrets["SPOTIPY"]["CLIENT_SECRET"]
+REDIRECT_URI  = st.secrets["SPOTIPY"]["REDIRECT_URI"]
 SCOPE         = "playlist-modify-private"
 
 # ─── UI Header ───
