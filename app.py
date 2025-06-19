@@ -42,7 +42,12 @@ if st.button("Generate Playlist"):
         titles, artists = fetch_song_and_artist(soup)
 
         # 2) OAuth & Spotify client
-        sp = create_spotify_connection()
+        sp = create_spotify_connection(
+    client_id=CLIENT_ID,
+    client_secret=CLIENT_SECRET,
+    redirect_uri=REDIRECT_URI,
+    scope=SCOPE
+)
         user_id = sp.current_user()["id"]
 
         # 3) Search & collect URIs
