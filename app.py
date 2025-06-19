@@ -35,6 +35,7 @@ date_input = st.date_input(
 if st.button("Generate Playlist"):
     # Format date
     target_date = date_input.strftime("%Y-%m-%d")
+    target_year = date_input.year
 
     try:
         # 1) Scrape Billboard
