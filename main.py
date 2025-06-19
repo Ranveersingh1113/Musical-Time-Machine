@@ -58,7 +58,7 @@ def create_spotify_connection(
         scope=scope,
         cache_path=cache_path,
         show_dialog=show_dialog
-        open_browser=False
+        
     )
     return Spotify(auth_manager=auth_manager)
 
