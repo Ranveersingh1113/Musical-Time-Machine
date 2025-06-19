@@ -32,6 +32,7 @@ auth_manager = SpotifyOAuth(
     show_dialog=True,
     open_browser=False
 )
+auth_manager.state = None
 auth_url = auth_manager.get_authorize_url()
 st.markdown(f"[🔑 Click here to authorize Spotify]({auth_url})")
 
