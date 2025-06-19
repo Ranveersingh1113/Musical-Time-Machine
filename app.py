@@ -15,9 +15,7 @@ CLIENT_ID = st.secrets["SPOTIPY"]["CLIENT_ID"]
 CLIENT_SECRET = st.secrets["SPOTIPY"]["CLIENT_SECRET"]
 REDIRECT_URI = st.secrets["SPOTIPY"]["REDIRECT_URI"]
 SCOPE = "playlist-modify-private"
-st.write("CLIENT_ID:", repr(CLIENT_ID))
-st.write("CLIENT_SECRET:", repr(CLIENT_SECRET))
-st.write("REDIRECT_URI:", repr(REDIRECT_URI))
+
 
 # ─── UI Header ───
 st.set_page_config(page_title="🎵 Musical Time Machine")
