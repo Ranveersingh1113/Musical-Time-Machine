@@ -2,7 +2,7 @@ import os
 from datetime import datetime
 
 import streamlit as st
-from dotenv import load_dotenv
+
 from billboard_time_machine import (
     fetch_billboard_page,
     fetch_song_and_artist,
