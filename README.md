@@ -4,12 +4,6 @@
 
 ---
 
-## 📸 Preview
-
-![musical-time-machine-demo](https://github.com/Ranveersingh1113/Musical-Time-Machine/assets/demo.gif)
-> _(Replace this with your own GIF or screenshot of the app UI)_
-
----
 
 ## 📌 Features
 
