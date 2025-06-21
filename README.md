@@ -103,6 +103,6 @@ Created by [Ranveersingh1113](https://github.com/Ranveersingh1113)
 
 ## 📄 License
 
-Specify your license here (MIT, GPL, etc.)
+This project is licensed under the MIT license
 
 ---
